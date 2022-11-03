@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background: #eee;
+}
+
+.container {
+    width: 35%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.question {
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 10px;
+    position: relative;
+    background: white;
+    margin-bottom: 30px;
+}
+
+.question h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.question h3,
+.question p {
+    position: relative;
+    z-index: 2;
+}
+
+.question i {
+    position: absolute;
+    cursor: pointer;
+}
+
+.question i.arrow {
+    display: none;
+    top: 15px;
+    right: 10px;
+    font-size: 22px;
+    z-index: 3;
+}
+
+.question i.xmark {
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    z-index: 3;
+}
+
+.question i.comment {
+    left: 0;
+    bottom: 0;
+    font-size: 70px;
+    z-index: 0;
+    color: #a5d6a7;
+    opacity: .2;
+}
+
+/* styling for question when is close  */
+.question.close {
+    background: transparent;
+}
+
+.question.close h3 {
+    margin-bottom: 0;
+}
+
+.question.close p {
+    display: none;
+}
+
+.question.close i.xmark {
+    display: none;
+}
+
+.question.close i.comment {
+    display: none;
+}
+
+.question.close i.arrow {
+    display: block;
+}
+
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .question h3 {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .question p {
+        font-size: 12px;
+    }
+
+    .question.close i.xmark {
+        font-size: 15px;
+    }
+
+    .question.close i.arrow {
+        font-size: 15px;
+    }
+}
